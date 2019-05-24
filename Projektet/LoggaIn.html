@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Hem</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Slutprojekt.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="divsidenav">
+	<nav role="navigation" class="sidenav">
+		<ul>
+			<li><a href="HemSida.html">Hem</a></li>
+			<li><a href="Recept.html">Recept</a></li>
+			<li><a href="LoggaIn.html" id="Active">Logga in</a></li>
+			<li><a href="Dator.html">Dator</a></li>
+		</ul>
+	</nav>
+</div>
+
+<main role="main">
+<form action="#">
+	<fieldset>
+		<legend>Personlig information:</legend><br>
+		
+		Användarnamn:<br>
+		<input type="username" name="username" value="Tim" required><br>
+		Lösenord:<br>
+		<input type="password" name="psw" value="1234567890" required><br><br><br><br>
+		
+				E-mail:<br>
+		<input type="email" name="email" required><br><br>
+		
+		Phonenumber:<br>
+		<input type="text" name="phonenumber" required><br><br><br><br>
+		
+		Select gender:<br>
+		<select name="Gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+			<option value="notspecified">Not specified</option>
+		</select><br><br><br><br>
+		
+		<input type="radio" name="age" value="<18" checked> I'm under 18 years old.<br>
+		<input type="radio" name="age" value="18+" required> I'm over 18 years old.<br><br>
+		
+		<input type="submit" value="Skicka">
+	</fieldset>
+</form>  
+</main>
+
+<div class="sidenav2">
+</div>
+
+<footer role="contentinfo">
+	<p>Sida gjord av Lucas Z.G som slutprojekt i Webbutveckling.</p>
+</footer>
+
+</body>
+</html>
