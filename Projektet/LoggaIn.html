@@ -1,5 +1,5 @@
  <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
 <title>Hem</title>
 <meta charset="utf-8">
@@ -20,42 +20,33 @@
 </div>
 
 <main role="main">
-<form action="#">
+<form action="#" method="post">
 	<fieldset>
-		<legend>Personlig information:</legend><br>
+		<legend>Skapa användare:</legend><br>
 		
-		Användarnamn:<br>
+		<label for="username">Användarnamn:</label><br>
 		<input type="username" name="username" value="Tim" required><br>
-		Lösenord:<br>
-		<input type="password" name="psw" value="1234567890" required><br><br><br><br>
 		
-				E-mail:<br>
-		<input type="email" name="email" required><br><br>
-		
-		Phonenumber:<br>
-		<input type="text" name="phonenumber" required><br><br><br><br>
-		
-		Select gender:<br>
-		<select name="Gender">
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-			<option value="other">Other</option>
-			<option value="notspecified">Not specified</option>
-		</select><br><br><br><br>
-		
-		<input type="radio" name="age" value="<18" checked> I'm under 18 years old.<br>
-		<input type="radio" name="age" value="18+" required> I'm over 18 years old.<br><br>
+		<label for="password">Lösenord:</label><br>
+		<input type="password" name="psw" value="1234567890" required><br><br>
 		
 		<input type="submit" value="Skicka">
+		
 	</fieldset>
-</form>  
+</form>		
+		
+		<button id="submit" onclick="location.href='SkapaAnvändare.html';">Skapa användare</button>
+
+		
+	 	
+ 
 </main>
 
 <div class="sidenav2">
 </div>
 
 <footer role="contentinfo">
-	<p>Sida gjord av Lucas Z.G som slutprojekt i Webbutveckling.</p>
+	<p>Sida gjord av Lucas Z.G som slutprojekt i PHP.</p>
 </footer>
 
 </body>
