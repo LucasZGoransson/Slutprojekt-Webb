@@ -165,7 +165,18 @@ input[type=text], input[type=email], input[type=username], input[type=password],
   box-sizing: border-box;
 }
 
-input[type=submit], button 
+input[type=submit]
+{
+  width: 100%;
+  background-color: cyan;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button
 {
   width: 100%;
   background-color: cyan;

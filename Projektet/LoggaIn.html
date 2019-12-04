@@ -1,53 +1,46 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
-<head>
-<title>Hem</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="Slutprojekt.css" rel="stylesheet">
-</head>
+	<head>
+		<title>Hem</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="Slutprojekt.css" rel="stylesheet">
+	</head>
 
-<body>
-<div class="divsidenav">
-	<nav role="navigation" class="sidenav">
-		<ul>
-			<li><a href="HemSida.html">Hem</a></li>
-			<li><a href="Recept.html">Recept</a></li>
-			<li><a href="LoggaIn.html" id="Active">Logga in</a></li>
-			<li><a href="Dator.html">Dator</a></li>
-		</ul>
-	</nav>
-</div>
+	<body>
+		<div class="divsidenav">
+			<nav role="navigation" class="sidenav">
+				<ul>
+					<li><a href="Hem.html">Hem</a></li>
+					<li><a href="LoggaIn.html" id="Active">Logga in</a></li>
+				</ul>
+			</nav>
+		</div>
 
-<main role="main">
-<form action="#" method="post">
-	<fieldset>
-		<legend>Skapa användare:</legend><br>
+		<main role="main">
+			<form action="InloggningRespons.html" method="post">
+				<fieldset>
+					<legend>Skapa användare:</legend><br>
+			
+					<label for="username">Användarnamn:</label><br>
+					<input type="username" name="username" value="Tim" required><br>
 		
-		<label for="username">Användarnamn:</label><br>
-		<input type="username" name="username" value="Tim" required><br>
+					<label for="password">Lösenord:</label><br>
+					<input type="password" name="psw" value="1234567890" required><br><br>
 		
-		<label for="password">Lösenord:</label><br>
-		<input type="password" name="psw" value="1234567890" required><br><br>
+					<input type="submit" value="Skicka">
 		
-		<input type="submit" value="Skicka">
-		
-	</fieldset>
-</form>		
-		
-		<button id="submit" onclick="location.href='SkapaAnvändare.html';">Skapa användare</button>
+					<button type="button" onclick="location.href='SkapaAnvandare.html';">Skapa användare</button>
+			
+				</fieldset>
+			</form>			 	
+		</main>
 
-		
-	 	
- 
-</main>
+		<div class="sidenav2"></div>
 
-<div class="sidenav2">
-</div>
+		<footer role="contentinfo">
+			<p>Sida gjord av Lucas Z.G som slutprojekt i PHP.</p>
+		</footer>
 
-<footer role="contentinfo">
-	<p>Sida gjord av Lucas Z.G som slutprojekt i PHP.</p>
-</footer>
-
-</body>
+	</body>
 </html>
