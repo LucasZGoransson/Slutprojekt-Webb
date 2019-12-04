@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sv">
 <head>
 <title>Hem</title>
@@ -8,14 +8,9 @@
 </head>
 
 <body>
-<div class="divsidenav">
-	<nav role="navigation" class="sidenav">
-		<ul>
-			<li><a href="Hem.html">Hem</a></li>
-			<li><a href="LoggaIn.html" id="Active">Logga in</a></li>
-		</ul>
-	</nav>
-</div>
+	<?php
+		require "template/nav.php";
+	?>
 
 <main role="main">
 <form action="SkapaAnvandareRespons.html" method="post">
@@ -23,10 +18,10 @@
 		<legend>Skapa användare:</legend><br>
 		
 		<label for="username">Användarnamn:</label><br>
-		<input type="username" name="username" value="Tim" required><br>
+		<input type="username" name="username" required><br>
 		
 		<label for="password">Lösenord:</label><br>
-		<input type="password" name="psw" value="1234567890" required><br><br><br><br>
+		<input type="password" name="psw" required><br><br><br><br>
 		
 		
 		
