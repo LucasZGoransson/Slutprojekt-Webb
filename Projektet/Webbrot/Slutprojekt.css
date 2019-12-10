@@ -11,14 +11,14 @@ body, html {
 }
 /*-----------------------------------------*/
 
-/*Sidenavigation css*/
+/*Sidenavigation css to make it look right*/
 .sidenav {
     height: 100%;
     width: 6.5%;
 	z-index: 0;
     top: 0;
     left: 0;
-    background-image: linear-gradient(hotpink, cyan);
+    background-image: linear-gradient(purple, yellow);
 	display: block;
 	margin: 0;
 	float: left;
@@ -51,12 +51,12 @@ nav.sidenav ul{
     padding: 20px;
     display: block;
 	float: left;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 /* Changes color if you hover above it.*/
 .sidenav a:hover {
-    background-color: #FFFFFF;
+    background-color: white;
     color: black;
 	left: 0;
 }
@@ -67,7 +67,7 @@ nav.sidenav ul{
     z-index: 0;
 	top: 0;
     right: 0;
-    background-image: linear-gradient(hotpink, cyan);
+    background-image: linear-gradient(purple, yellow);
 	display: block;
 	margin: 0;
 	float: right;
@@ -85,7 +85,7 @@ footer {
 	width: 100%;
 	z-index: 1;
 	bottom: 0;
-	background-color: hotpink;
+	background-color: purple;
 	display: block;
 	text-align: center;
 	float: left;
@@ -95,66 +95,19 @@ footer p{
 	margin: 35px 0px;
 	font-family: Courier New;
 	font-size: 1.5em;
-	color: 	hsl(180, 100%, 50%);
+	color: yellow;
 }
-/*----------------------------------------------------------------------------------*/
+/*-----------------------------------------*/
 
-/*----------------------------------------------------------------------------------*/
 
 main{
 	float: left;
 	width: calc(100% - 6.5% - 2.06%);
 }
 
-td.cherry{
-	width: calc(100% / 3);
-}
-
-td.churro{
-	width: calc(100% / 8);
-}
-
 /*-----------------------------------------*/
 
-/*Grid*/
-
-.grid{
-	display: grid;
-	grid-template-columns: 10px 1fr 1fr 10px;
-	grid-gap: 10px;
-	margin: 10px 0ex;
-}
-
-.boxes{
-	text-align: center;
-	border-radius: 5px;
-	margin: 10px 0;
-	font-size: 15px;
-	background-color: rgb(0, 255, 255);
-	color: white;
-	margin: 0;
-}
-
-.gridboxes{
-	grid-column: 2/3;
-}
-
-.insideboxes {
-	background-color: white;
-	border-radius: 5px;
-	margin: 2%;
-	color: black;
-	height: 88%;
-	width: 96%;
-}
-	
-.gridimg {
-	height: 400px;
-	width: 300px;
-}
-
-
-/*-----------------------------------------*/
+/*Submit and create user button traits*/
 input[type=text], input[type=email], input[type=username], input[type=password], select 
 {
   width: 100%;
@@ -168,7 +121,7 @@ input[type=text], input[type=email], input[type=username], input[type=password],
 input[type=submit]
 {
   width: 100%;
-  background-color: cyan;
+  background-color: purple;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -179,36 +132,18 @@ input[type=submit]
 button
 {
   width: 100%;
-  background-color: cyan;
+  background-color: purple;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
 }
-/*-----------------------------------------*/
 
-.pvideo{
-	text-align: center;
-	margin: 0;
-}
- 
-iframe{
-	width: 100%;
-	height: 720px;
-}
+/*----------------------------------------------------------------------------------*/
 
-.topimg{
-	width: 100%;
-	height: 400px;
-}
-
-.tableclass{
-	width: 100%;
-}
-/*-----------------------------------------*/
-
-@media screen and (max-width: 600px){
+/*Media queries*/
+@media screen and (max-width: 1600px){
 	main{
 	float: left;
 	width: 100%;
@@ -217,46 +152,46 @@ iframe{
 /*-----------------------------------------*/	
 
 	.sidenav {
-    height: 6.5%;
+	height: 10%;
     width: 100%;
 	z-index: 1;
     top: 0;
     left: 0;
-    background-image: linear-gradient(hotpink, cyan);
-	display: inline;
+    background-image: linear-gradient(purple);
+	display: block;
 	margin: 0;
 	float: left;
 	position: fixed; 
-}
+	}
 
 	.sidenav ul{
 	list-style: none;
-	width: 100%;	
-	height: 100%;
+	width: 50%;	
+	height: 10%;
 	margin: 0; 
 	padding: 0;
 	}
 	
 	nav.sidenav li a{
 	text-decoration: none;
-	height: 6.5%;
-	width: 25%;
+	height: 10%;
+	width: 100%;
 	float: left;
 	}
 
 	.divsidenav {
-	height: 6.5%;
+	height: 10%;
 	float: left;
 	width: 100%;	
 	}
 
 	.sidenav a {
     color: white;
-    padding: 20px;
+    padding: 0% 50%;
     display: block;
 	float: left;
-	transition: 0.3s;
-}
+	transition: 0.2s;
+	}
 
 	.sidenav2 {
     height: 6.5%;
@@ -264,43 +199,21 @@ iframe{
     z-index: 0;
 	top: 0;
     right: 0;
-    background-image: linear-gradient(hotpink, cyan);
+    background-image: linear-gradient(purple);
 	display: inline;
 	margin: 0;
 	float: right;
 	position: fixed;
 	}
 	
-	.nav2 {
-    height: 6.5%;
-    width: 100%;
-	z-index: 1;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(hotpink, cyan);
-	display: inline;
-	margin: 0;
-	float: left;
-	position: fixed; 
-}
 /*-----------------------------------------*/	
-	
-	.topimg{
-		width: 100%;
-		height: 75px;
-	}
-	
-	iframe{
-		width: 100%;
-		height: 350px;
-	}
 
 	footer {
-		height: 50px;
+		height: 40px;
 		width: 100%;
 		z-index: 1;
 		bottom: 0;
-		background-color: hotpink;
+		background-image: linear-gradient(purple);
 		display: block;
 		text-align: center;
 		float: left;
@@ -310,24 +223,8 @@ iframe{
 		margin: 10px 0px;
 		font-family: Courier New;
 		font-size: 15px;
-		color: 	hsl(180, 100%, 50%);
+		color: yellow;
 	}
-
-/*-----------------------------------------*/	
-	
-	.gridimg {
-		height: 300px;
-		width: 200px;
-	}
-
-	.grid{
-		display: grid;
-		grid-template-columns: 1fr;
-		margin: 2px 0px;
-	}
-	.gridboxes{
-		grid-column: 1 / 2;
-	}	
 }
 
 

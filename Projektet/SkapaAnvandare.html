@@ -4,13 +4,19 @@
 <title>Hem</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="Slutprojekt.css" rel="stylesheet">
+<link href="Webbrot/Slutprojekt.css" rel="stylesheet">
 </head>
 
 <body>
-	<?php
-		require "template/nav.php";
-	?>
+	<?php //require "template/nav.php";	?>
+<div class="divsidenav">
+	<nav role="navigation" class="sidenav">
+		<ul>
+			<li><a href="Hem.html">Hem</a></li>
+			<li><a href="LoggaIn.html" id="Active">Logga in</a></li>
+		</ul>
+	</nav>
+</div>
 
 <main role="main">
 <form action="SkapaAnvandareRespons.html" method="post">
@@ -58,7 +64,7 @@
 </div>
 
 <footer role="contentinfo">
-	<p>Sida gjord av Lucas Z.G som slutprojekt i PHP.</p>
+	<p>Sida gjord av Lucas som slutprojekt i PHP.</p>
 </footer>
 
 </body>
