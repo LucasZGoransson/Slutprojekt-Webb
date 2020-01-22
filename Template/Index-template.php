@@ -1,3 +1,13 @@
+<?php
+	$namn="";
+	
+	session_start();
+	
+	if(isset($_SESSION['username'])){
+		$namn=$_SESSION['username'];
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 	<head>
@@ -14,7 +24,7 @@
 
 
 		<main role="main">
-			<h1>Välkommen till Webbshoppen!</h1>
+			<h1>Välkommen <?php echo $namn;?> till Webbshoppen!</h1>
 		</main>
 
 		
