@@ -3,6 +3,7 @@
 		<ul>
 			<li><a href="Index.php" id="Active">Hem</a></li>
 			<li><a href="LoggaIn.php">Logga in</a></li>
+			<li><a href="Produkter.php">Produkter</a></li>
 		</ul>
 	</nav>
 </div>
