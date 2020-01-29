@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 22 jan 2020 kl 10:56
+-- Tid vid skapande: 29 jan 2020 kl 10:45
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -80,7 +80,7 @@ CREATE TABLE `produkter` (
 INSERT INTO `produkter` (`produktID`, `namn`, `beskrivning`, `pris`, `bild`) VALUES
 (1, 'CPU', 'Snabb', 1200, '123456'),
 (2, 'GPU', 'Kraftfull', 2500, '654321'),
-(3, 'PSU', 'Energirik', 1200, '321456'),
+(3, 'PSU', 'Elektrisk', 1200, '321456'),
 (4, 'RAM', 'Guldfiskminne', 800, '123654');
 
 -- --------------------------------------------------------

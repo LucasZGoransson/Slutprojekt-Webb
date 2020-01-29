@@ -28,28 +28,23 @@
 		?>
 
 		<main role="main">
-			<table>
-				<tr>
-					<th>Produkt:</th>
-					<th>Beskrivning:</th>
-					<th>Pris: (SEK)</th>
-					<th>Bild:</th>
-				</tr>
-				
-				<?php
-				while($row = $result -> fetch_assoc())
-				{
-				echo "<tr><td>";
-				echo $row['namn'];
-				echo "</td><td>";
-				echo $row['beskrivning'];
-				echo "</td><td>";
-				echo $row['pris'];
-				echo "</td><td>";
-				echo $row['bild'];
-				}
-				?>	
-			</table>
+			<form action="InloggningRespons.php" method="post">
+				<fieldset>
+					<legend>Lägg till produkter:</legend><br>
+			
+					<label for="Namn">Namn på produkt:</label><br>
+					<input type="text" name="produktnamn" id="Namn" required><br>
+		
+					<label for="Beskrivning">Beskrivning:</label><br>
+					<input type="text" name="produktbeskrivning" id="Beskrivning" required><br>
+					
+					<label for="Pris">Pris: (SEK)</label><br>
+					<input type="text" name="produktpris" id="Pris" required><br>
+		
+					<input type="submit" value="Lägg till">
+
+				</fieldset>
+			</form>			 	
 		</main>
 
 		
