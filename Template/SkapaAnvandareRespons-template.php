@@ -39,7 +39,7 @@ if(isset($_POST['username']) && isset($_POST['psw']) && isset($_POST['fname']) &
 		{
 			$status = 1;
 			$sql = "INSERT INTO users(anvnamn, email, password, status) VALUE (?,?,?,?)";
-			var_dump($res);
+			
 			$res = $dbh -> prepare($sql);
 			$res -> bind_param("sssi", $username, $email, $psw, $status);
 			$res -> execute();

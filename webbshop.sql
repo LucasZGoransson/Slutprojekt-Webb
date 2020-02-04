@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 29 jan 2020 kl 10:45
+-- Tid vid skapande: 04 feb 2020 kl 10:50
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -44,7 +44,8 @@ CREATE TABLE `kunder` (
 --
 
 INSERT INTO `kunder` (`kundID`, `anvnamn`, `fornamn`, `efternamn`, `adress`, `postnummer`, `postadress`, `telefon`) VALUES
-(4, 'Kalle123', 'Kalle', 'Karlsson', '1', 3, '2', '1234567890');
+(4, 'Kalle123', 'Kalle', 'Karlsson', '1', 3, '2', '1234567890'),
+(5, 'Pelle123', 'Pelle', 'Pettersson', '1', 3, '2', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,12 @@ INSERT INTO `produkter` (`produktID`, `namn`, `beskrivning`, `pris`, `bild`) VAL
 (1, 'CPU', 'Snabb', 1200, '123456'),
 (2, 'GPU', 'Kraftfull', 2500, '654321'),
 (3, 'PSU', 'Elektrisk', 1200, '321456'),
-(4, 'RAM', 'Guldfiskminne', 800, '123654');
+(4, 'RAM', 'Guldfiskminne', 800, '123654'),
+(5, 'APU', 'Dubbelmacka', 1500, 'bild.jpg'),
+(6, 'SSD', 'SnabbtÃ¤nkt', 700, 'bild.jpg'),
+(7, 'HDD', 'Vis', 450, 'bild.jpg'),
+(8, 'Moderkort', 'Plats fÃ¶r allt', 1400, 'bild.jpg'),
+(12, 'Chassi', 'Metallisk', 600, 'bild.jpg');
 
 -- --------------------------------------------------------
 
@@ -101,7 +107,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`anvnamn`, `email`, `password`, `status`) VALUES
-('Kalle123', 'K.Karlsson@hotmail.com', 'qwe123', 1);
+('Kalle123', 'K.Karlsson@hotmail.com', 'qwe123', 1),
+('Pelle123', 'pelle.pettersson@hotmail.com', 'qwe123', 1);
 
 --
 -- Index för dumpade tabeller
@@ -145,7 +152,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT för tabell `kunder`
 --
 ALTER TABLE `kunder`
-  MODIFY `kundID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `kundID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT för tabell `orders`
@@ -157,7 +164,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT för tabell `produkter`
 --
 ALTER TABLE `produkter`
-  MODIFY `produktID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `produktID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restriktioner för dumpade tabeller

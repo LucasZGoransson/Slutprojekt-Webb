@@ -1,16 +1,37 @@
 <?php
 	session_start();
-	
-	if(isset($_SESSION['username'])){
+	if(isset($_SESSION['username']))
+	{
 		$namn=$_SESSION['username'];
 	}
-	
 	require "connect.php";
-		$sql = "SELECT * FROM produkter";
+	
+	if (isset($_POST['produktnamn']))
+	{
+		$produktnamn = filter_input(INPUT_POST, 'produktnamn', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
+		$produktbeskrivning = filter_input(INPUT_POST, 'produktbeskrivning', FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
+		$produktpris = filter_input(INPUT_POST, 'produktpris', FILTER_SANITIZE_NUMBER_INT);
+		
+		$bild="bild.jpg";
+		
+		$sql = "INSERT INTO produkter(namn, beskrivning, pris, bild) VALUE (?,?,?,?)";
+		
 		$res = $dbh -> prepare($sql);
+		$res -> bind_param("ssis", $produktnamn, $produktbeskrivning, $produktpris, $bild);
 		$res -> execute();
-		$result = $res -> get_result();
-		$dbh -> close();
+			
+		if(!$res)
+		{
+			echo "Felaktig sql-fråga";
+			exit(1);
+		}
+	}
+	
+	$sql = "SELECT * FROM produkter";
+	$res = $dbh -> prepare($sql);
+	$res -> execute();
+	$result = $res -> get_result();
+	$dbh -> close();
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +49,26 @@
 		?>
 
 		<main role="main">
+			<form action="Produkter.php" method="post">
+				<fieldset>
+					<legend>Lägg till produkter:</legend><br>
+			
+					<label for="Namn">Namn på produkt:</label><br>
+					<input type="text" name="produktnamn" id="Namn" required><br>
+		
+					<label for="Beskrivning">Beskrivning:</label><br>
+					<input type="text" name="produktbeskrivning" id="Beskrivning" required><br>
+					
+					<label for="Pris">Pris: (SEK)</label><br>
+					<input type="text" name="produktpris" id="Pris" required><br>
+		
+					<input type="submit" value="Lägg till">
+
+				</fieldset>
+			</form>	
+			
+			<br><br><br>
+			
 			<table>
 				<tr>
 					<th>Produkt:</th>
