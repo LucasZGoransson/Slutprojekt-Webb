@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 04 feb 2020 kl 10:50
+-- Tid vid skapande: 05 feb 2020 kl 10:52
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 

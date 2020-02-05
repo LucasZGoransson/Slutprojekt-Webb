@@ -1,9 +1,12 @@
 <?php
 	session_start();
-	if(isset($_SESSION['username']))
+	
+	if(!isset($_SESSION['username']))
 	{
-		$namn=$_SESSION['username'];
+			header("Location:LoggaIn.php");
 	}
+	
+	$namn=$_SESSION['username'];
 	require "connect.php";
 	
 	if (isset($_POST['produktnamn']))
@@ -47,7 +50,6 @@
 		<?php
 			require "../Template/Nav.php";
 		?>
-
 		<main role="main">
 			<form action="Produkter.php" method="post">
 				<fieldset>
@@ -75,6 +77,7 @@
 					<th>Beskrivning:</th>
 					<th>Pris: (SEK)</th>
 					<th>Bild:</th>
+					<th>Lägg till i varukorg:
 				</tr>
 				
 				<?php
@@ -92,7 +95,6 @@
 				?>	
 			</table>
 		</main>
-
 		
 		<div class="sidenav2">
 		</div>
