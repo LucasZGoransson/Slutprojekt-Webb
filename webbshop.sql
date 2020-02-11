@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 05 feb 2020 kl 10:52
+-- Tid vid skapande: 11 feb 2020 kl 10:27
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -44,8 +44,8 @@ CREATE TABLE `kunder` (
 --
 
 INSERT INTO `kunder` (`kundID`, `anvnamn`, `fornamn`, `efternamn`, `adress`, `postnummer`, `postadress`, `telefon`) VALUES
-(4, 'Kalle123', 'Kalle', 'Karlsson', '1', 3, '2', '1234567890'),
-(5, 'Pelle123', 'Pelle', 'Pettersson', '1', 3, '2', '1234567890');
+(1, 'Kalle123', 'Kalle', 'Karlsson', '1', 2, '3', '1234567890'),
+(2, 'Pelle123', 'Pelle', 'Pettersson', '1', 2, '3', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -79,15 +79,15 @@ CREATE TABLE `produkter` (
 --
 
 INSERT INTO `produkter` (`produktID`, `namn`, `beskrivning`, `pris`, `bild`) VALUES
-(1, 'CPU', 'Snabb', 1200, '123456'),
-(2, 'GPU', 'Kraftfull', 2500, '654321'),
-(3, 'PSU', 'Elektrisk', 1200, '321456'),
-(4, 'RAM', 'Guldfiskminne', 800, '123654'),
+(1, 'CPU', 'Snabb', 1200, 'bild.jpg'),
+(2, 'GPU', 'Kraftfull', 2500, 'bild.jpg'),
+(3, 'PSU', 'Elektrisk', 1200, 'bild.jpg'),
+(4, 'RAM', 'Guldfiskminne', 800, 'bild.jpg'),
 (5, 'APU', 'Dubbelmacka', 1500, 'bild.jpg'),
 (6, 'SSD', 'SnabbtÃ¤nkt', 700, 'bild.jpg'),
 (7, 'HDD', 'Vis', 450, 'bild.jpg'),
 (8, 'Moderkort', 'Plats fÃ¶r allt', 1400, 'bild.jpg'),
-(12, 'Chassi', 'Metallisk', 600, 'bild.jpg');
+(9, 'Chassi', 'Metallisk', 600, 'bild.jpg');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ ALTER TABLE `kunder`
 -- AUTO_INCREMENT för tabell `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `orderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT för tabell `produkter`

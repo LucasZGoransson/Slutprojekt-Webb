@@ -83,6 +83,7 @@
 				<?php
 				while($row = $result -> fetch_assoc())
 				{
+					$pid=$row['produktID'];
 				echo "<tr><td>";
 				echo $row['namn'];
 				echo "</td><td>";
@@ -91,6 +92,9 @@
 				echo $row['pris'];
 				echo "</td><td>";
 				echo $row['bild'];
+				echo "</td><td>";
+				echo "<button type='button' onclick='location.href=\"ProduktBRespons.php?pid=$pid\";'>Lägg till i varukorg</button>";
+				echo "</td></tr>";
 				}
 				?>	
 			</table>

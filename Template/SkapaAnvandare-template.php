@@ -53,12 +53,14 @@
 		
 					<label for="address">Adress:</label><br>
 					<input type="text" name="address" required><br><br>
+					
+					<label for="Zipcode">Postnummer:</label><br>
+					<input type="text" name="zipcode" required><br><br>
 	
 					<label for="city">Ort:</label><br>
-					<input type="text" name="city" required><br><br>
-			
-					<label for="Zipcode">Postnummer:</label><br>
-					<input type="text" name="zipcode" required><br><br><br><br>
+					<input type="text" name="city" required><br><br><br><br>
+					
+					
 		
 					<label for="Gender">Kön:</label><br>
 					<select name="gender">

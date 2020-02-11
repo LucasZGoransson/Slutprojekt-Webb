@@ -1,11 +1,31 @@
 <?php
-	else
+	session_start();
+	
+	if(!isset($_SESSION['username']))
+	{
+			header("Location:LoggaIn.php");
+	}
+	
+	$namn=$_SESSION['username'];
+	require "connect.php";
+
+	if(isset($_GET["pid"]))
 		{
-			$status = 1;
-			$sql = "INSERT INTO orders (orderID, produktID, antal, kundID) VALUE (?,?,?,?)";
+			$antal = 1;
+			$produktID=$_GET['pid'];
+			
+			$sql="SELECT kundID FROM kunder WHERE anvnamn=?";
+			$res = $dbh -> prepare($sql);
+			$res -> bind_param("s", $namn);
+			$res -> execute();
+			$result = $res -> get_result();
+			$row = $result -> fetch_assoc();
+			$kundID=$row['kundID'];
+			
+			$sql = "INSERT INTO orders ( produktID, antal, kundID) VALUE (?,?,?)";
 			
 			$res = $dbh -> prepare($sql);
-			$res -> bind_param("sssi", $username, $email, $psw, $status);
+			$res -> bind_param("iii", $produktID, $antal, $kundID);
 			$res -> execute();
 			
 			if(!$res)
@@ -18,10 +38,10 @@
 			
 			mysqli_close($dbh);
 		}
-	}
+	
 	
 	else
 	{
-		header("location:ProduktBRespons.php");
+		header("location:Produkter.php");
 	}
 ?>
