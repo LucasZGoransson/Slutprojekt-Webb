@@ -24,7 +24,7 @@
 
 
 		<main role="main">
-			<h1>Välkommen <?php echo $namn;?> till Webbshoppen!</h1>
+			<h1>Välkommen <?php echo $namn;?> till Webbshopen!</h1>
 		</main>
 
 		

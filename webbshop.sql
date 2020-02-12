@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 11 feb 2020 kl 10:27
+-- Tid vid skapande: 12 feb 2020 kl 10:49
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -45,7 +45,8 @@ CREATE TABLE `kunder` (
 
 INSERT INTO `kunder` (`kundID`, `anvnamn`, `fornamn`, `efternamn`, `adress`, `postnummer`, `postadress`, `telefon`) VALUES
 (1, 'Kalle123', 'Kalle', 'Karlsson', '1', 2, '3', '1234567890'),
-(2, 'Pelle123', 'Pelle', 'Pettersson', '1', 2, '3', '1234567890');
+(2, 'Pelle123', 'Pelle', 'Pettersson', '1', 2, '3', '1234567890'),
+(6, 'admin', 'Anders', 'Andersson', '1', 2, '3', '1234567890');
 
 -- --------------------------------------------------------
 
@@ -107,7 +108,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`anvnamn`, `email`, `password`, `status`) VALUES
-('Kalle123', 'K.Karlsson@hotmail.com', 'qwe123', 1),
+('admin', 'anders.andersson@hotmail.com', 'qwe123', 2),
+('Kalle123', 'kalle.karlsson@hotmail.com', 'qwe123', 1),
 ('Pelle123', 'pelle.pettersson@hotmail.com', 'qwe123', 1);
 
 --
@@ -152,13 +154,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT för tabell `kunder`
 --
 ALTER TABLE `kunder`
-  MODIFY `kundID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `kundID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT för tabell `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `orderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `orderID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT för tabell `produkter`
