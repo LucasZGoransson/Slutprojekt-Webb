@@ -47,29 +47,35 @@
 	</head>
 
 	<body>
+	
 		<?php
 			require "../Template/Nav.php";
 		?>
+		
 		<main role="main">
-			<form action="Produkter.php" method="post">
-				<fieldset>
-					<legend>Lägg till produkter:</legend><br>
+			<?php
+				if($_SESSION['status']==2){
+					echo<<<ADMIN
+						<form action="Produkter.php" method="post">
+							<fieldset>
+							<legend>Lägg till produkter:</legend><br>
 			
-					<label for="Namn">Namn på produkt:</label><br>
-					<input type="text" name="produktnamn" id="Namn" required><br>
+								<label for="Namn">Namn på produkt:</label><br>
+								<input type="text" name="produktnamn" id="Namn" required><br>
 		
-					<label for="Beskrivning">Beskrivning:</label><br>
-					<input type="text" name="produktbeskrivning" id="Beskrivning" required><br>
+								<label for="Beskrivning">Beskrivning:</label><br>
+								<input type="text" name="produktbeskrivning" id="Beskrivning" required><br>
 					
-					<label for="Pris">Pris: (SEK)</label><br>
-					<input type="text" name="produktpris" id="Pris" required><br>
+								<label for="Pris">Pris: (SEK)</label><br>
+								<input type="text" name="produktpris" id="Pris" required><br>
 		
-					<input type="submit" value="Lägg till">
-
-				</fieldset>
-			</form>	
-			
-			<br><br><br>
+							<input type="submit" value="Lägg till">
+							</fieldset>
+						</form>	
+						<br><br>
+ADMIN;
+				}
+			?>
 			
 			<table>
 				<tr>

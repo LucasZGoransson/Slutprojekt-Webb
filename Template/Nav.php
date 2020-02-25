@@ -20,6 +20,7 @@ NAV;
 				<ul>
 					<li><a href="Index.php">Hem</a></li>
 					<li><a href="Produkter.php">Produkter</a></li>
+					<li><a href="Kundvagn.php">Kundvagn</a></li>
 					<li><a href="LoggaUt.php">Logga ut</a></li>
 				</ul>
 			</nav>
